@@ -36,7 +36,7 @@ async function addFavorito() {
           divCtn.appendChild(gif);
           favResults.appendChild(divCtn);
           //los gifs de favoritos tmb tienen que tener tarjeta
-          gif.addEventListener("mouseover", () => {
+          gif.addEventListener("mouseenter", () => {
             mode = "";
             gifCard(favs, divCtn, i, mode);
           });
