@@ -37,7 +37,7 @@ async function addTrending() {
         mode = "mobile";
         gifCard(trend, ctn, i, mode, desktopCard, mobileCard);
       }
-      gif.addEventListener("mouseover", desktopCard);
+      gif.addEventListener("mouseenter", desktopCard);
       gif.addEventListener("click", mobileCard);
     }
     //EVENTOS
@@ -316,7 +316,7 @@ function addSearchToDOM(json, name) {
       mode = "mobile";
       gifCard(json, searchGifCtn, i, mode, desktopCard, mobileCard);
     }
-    gif.addEventListener("mouseover", desktopCard);
+    gif.addEventListener("mouseenter", desktopCard);
     gif.addEventListener("click", mobileCard);
     btn.textContent = "Ver más";
     btn.id = "btnVerMas";
@@ -339,7 +339,7 @@ function verMas(json, div) {
       gif.setAttribute("src", json.data[j].images.downsized_medium.url);
       gif.id = "gif" + j;
       //creo el listener para el evento de las tarjetas, cuya función y demás está definido en styles/cards.js
-      gif.addEventListener("mouseover", () => {
+      gif.addEventListener("mouseenter", () => {
         gifCard(json, div, j, mode);
       });
       gif.addEventListener("click", () => {
