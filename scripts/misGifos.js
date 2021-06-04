@@ -274,7 +274,7 @@ async function showMisGifs() {
           misGifosCtn.appendChild(myGif);
           misGifosResults.appendChild(misGifosCtn);
           //event para mostrar la card con hover o touch
-          myGif.addEventListener("mouseover", () => {
+          myGif.addEventListener("mouseenter", () => {
             mode = "";
             gifCard(json, misGifosCtn, i, mode);
           });
