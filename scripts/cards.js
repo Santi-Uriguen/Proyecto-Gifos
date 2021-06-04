@@ -73,7 +73,7 @@ function gifCard(json, divContainer, i, mode, desktopCard, mobileCard) {
     backDiv.appendChild(divText);
   }
   //eventos
-  backDiv.addEventListener("mouseout", gifCardOut); //elimina la tarjeta al hacer mouseout
+  backDiv.addEventListener("mouseleave", gifCardOut); //elimina la tarjeta al hacer mouseout
 
   favBtn.addEventListener("click", () => {
     //agregado/quitado de un gif a favortios
@@ -81,7 +81,7 @@ function gifCard(json, divContainer, i, mode, desktopCard, mobileCard) {
   });
   fullBtn.addEventListener("click", () => {
     gifMax(divContainer, i, json, divIcons, desktopCard, mobileCard);
-    backDiv.removeEventListener("mouseout", gifCardOut);
+    backDiv.removeEventListener("mouseleave", gifCardOut);
     backDiv.remove();
   });
 }
